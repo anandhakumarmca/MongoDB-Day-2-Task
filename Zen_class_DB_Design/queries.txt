@@ -1,0 +1,139 @@
+Q1: Find all the topics and tasks which are thought in the month of October
+===========================================================================
+
+db.topics.find({ "topic_date": { $gte: ISODate("2023-10-01"), $lte: ISODate("2023-10-31") } })
+-----------------------------------------------------------------------------------------------
+
+Q2: Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+==================================================================================
+
+db.company_drives.find({ "drive_date": { $gte: ISODate("2020-10-15"), $lte: ISODate("2020-10-31") } })
+------------------------------------------------------------------------------------------------------
+
+Q3: Find all the company drives and students who are appeared for the placement
+===============================================================================
+
+db.attendance.aggregate([
+    {
+        $match: { "is_present": true }
+    },
+    {
+        $lookup: {
+            from: "users",
+            localField: "user_id",
+            foreignField: "_id",
+            as: "user"
+        }
+    },
+    {
+        $lookup: {
+            from: "company_drives",
+            localField: "date",
+            foreignField: "drive_date",
+            as: "company_drive"
+        }
+    },
+    {
+        $project: {
+            "company_drive.drive_name": 1,
+            "user.name": 1
+        }
+    }
+])
+
+-------------------------------------------------
+
+Q4: Find the number of problems solved by the user in codekata
+==============================================================
+
+db.codekata.aggregate([
+    {
+        $group: {
+            _id: "$user_id",
+            problems_solved: { $sum: 1 }
+        }
+    },
+    {
+        $lookup: {
+            from: "users",
+            localField: "_id",
+            foreignField: "_id",
+            as: "user"
+        }
+    },
+    {
+        $project: {
+            "user.name": 1,
+            "problems_solved": 1
+        }
+    }
+])
+---------------------------------------------------------------
+
+Q5: Find all the mentors with who has the mentee's count more than 15
+=====================================================================
+
+db.mentorship.aggregate([
+    {
+        $group: {
+            _id: "$mentor_id",
+            mentee_count: { $sum: 1 }
+        }
+    },
+    {
+        $match: { "mentee_count": { $gt: 15 } }
+    },
+    {
+        $lookup: {
+            from: "mentors",
+            localField: "_id",
+            foreignField: "_id",
+            as: "mentor"
+        }
+    },
+    {
+        $project: {
+            "mentor.mentor_name": 1,
+            "mentee_count": 1
+        }
+    }
+])
+------------------------------------------------------------------
+
+Q6: Find the number of users who are absent and task is not submitted between 15 oct-2020 and 31-oct-2020
+==========================================================================================================
+
+db.users.aggregate([
+    {
+        $lookup: {
+            from: "attendance",
+            localField: "_id",
+            foreignField: "user_id",
+            as: "attendance"
+        }
+    },
+    {
+        $lookup: {
+            from: "tasks",
+            localField: "_id",
+            foreignField: "user_id",
+            as: "tasks"
+        }
+    },
+    {
+        $match: {
+            "attendance.date": { $gte: ISODate("2020-10-15"), $lte: ISODate("2020-10-31") },
+            "attendance.is_present": false,
+            "tasks.date_assigned": { $gte: ISODate("2020-10-15"), $lte: ISODate("2020-10-31") },
+            "tasks.date_submitted": null
+        }
+    },
+    {
+        $group: {
+            _id: null,
+            absent_users_count: { $sum: 1 }
+        }
+    }
+])
+-------------------------------------------------------------------------------------------------
+==================================================================================================
