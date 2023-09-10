@@ -1,0 +1,194 @@
+Zen class Database Design
+-------------------------
+Sample Users Collections
+-------------------------
+
+[
+    {
+        "_id": ObjectId("user_id_1"),   // _id field is an automatically generated unique identifier by MongoDB
+        "name": "Anandh Kumar",
+        "email": "accetanandhmca@gmail.com",
+        "age": 32,
+        "gender": "Male",
+        "address": {
+            "street": "79/B",
+            "city": "Palani",
+            "state": "Tamilnadu",
+            "zipcode": "624601"
+        }
+    },
+    {
+        "_id": ObjectId("user_id_2"),    // _id field is an automatically generated unique identifier by MongoDB
+        "name": "Mani Kumar",
+        "email": "kumaarit@gmail.com",
+        "age": 35,
+        "gender": "Male",
+        "address": {
+            "street": "79/B",
+            "city": "Palani",
+            "state": "Tamilnadu",
+            "zipcode": "624601"
+        }
+    },
+]
+---------------------------------------------------------------------------------------------------------------------
+Sample Codekata Collections
+---------------------------
+
+[
+    {
+        "_id": ObjectId("codekata_id_1"),  // _id field is an autom generated 
+        "user_id": ObjectId("user_id_1"),  // _id field is an autom generated 
+        "problem_id": ObjectId("problem_id_1"), // _id field is an autom generated 
+        "date_solved": ISODate("2023-10-05"),
+        "language": "Nodejs",
+        "solution_code": "/* solution code  */",
+    },
+    {
+        "_id": ObjectId("codekata_id_2"),  // _id field is an autom generated 
+        "user_id": ObjectId("user_id_2"),  // _id field is an autom generated 
+        "problem_id": ObjectId("problem_id_2"),  // _id field is an autom generated 
+        "date_solved": ISODate("2023-10-08"),
+        "language": "Java",
+        "solution_code": "/* solution Java code here */",
+    },
+]
+
+---------------------------------------------------------------------------------------------------------------------
+Sample Attendance Collections
+-----------------------------
+
+[
+    {
+        "_id": ObjectId("attendance_id_1"),  // _id field is an autom generated 
+        "user_id": ObjectId("user_id_1"),   // _id field is an autom generated 
+        "date": ISODate("2023-10-01"),
+        "is_present": true,
+    },
+    {
+        "_id": ObjectId("attendance_id_2"),   // _id field is an autom generated 
+        "user_id": ObjectId("user_id_2"),   // _id field is an autom generated 
+        "date": ISODate("2023-10-01"),
+        "is_present": false,
+    },
+    {
+        "_id": ObjectId("attendance_id_3"),  // _id field is an autom generated 
+        "user_id": ObjectId("user_id_1"),   // _id field is an autom generated 
+        "date": ISODate("2023-10-02"), 
+        "is_present": true,
+    },
+]
+
+---------------------------------------------------------------------------------------------------------------------
+Sample Topics Collections
+-------------------------
+
+[
+    {
+        "_id": ObjectId("topic_id_1"),  // _id field is an autom generated 
+        "topic_name": "MongoDB Basics",
+        "description": "Introduction to MongoDB and NoSQL databases",
+        "mentor": "Manikandan",
+        "start_date": ISODate("2023-10-05"),
+        "end_date": ISODate("2023-10-10"),
+    },
+    {
+        "_id": ObjectId("topic_id_2"),  // _id field is an autom generated 
+        "topic_name": "JavaScript Fundamentals",
+        "description": "Fundamental concepts of JavaScript programming",
+        "mentor": "Tirupathi",
+        "start_date": ISODate("2023-10-12"),
+        "end_date": ISODate("2023-10-18"),
+    },
+]
+
+---------------------------------------------------------------------------------------------------------------------
+Sample Tasks Collections
+------------------------
+
+[
+    {
+        "_id": ObjectId("task_id_1"),   // _id field is an autom generated 
+        "user_id": ObjectId("user_id_1"),  // _id field is an autom generated 
+        "task_name": "JavaScript Task 4",
+        "date_assigned": ISODate("2023-10-15"),
+        "date_due": ISODate("2023-10-25"),
+        "date_submitted": ISODate("2023-10-23"),
+        "status": "completed",
+    },
+    {
+        "_id": ObjectId("task_id_2"),  // _id field is an autom generated 
+        "user_id": ObjectId("user_id_2"),  // _id field is an autom generated 
+        "task_name": "Codekata Numbers Challenge",
+        "date_assigned": ISODate("2023-10-18"),
+        "date_due": ISODate("2023-10-28"),
+        "date_submitted": null,
+        "status": "pending",
+    },
+]
+
+---------------------------------------------------------------------------------------------------------------------
+Sample Company-Drives Collections
+---------------------------------
+
+[
+    {
+        "_id": ObjectId("drive_id_1"),  // _id field is an autom generated 
+        "drive_name": "Infosoft Company Recruitment",
+        "drive_date": ISODate("2023-08-20"),
+        "placement_status": "completed",
+        "placement_candidates": [
+            {
+                "user_id": ObjectId("user_id_1"),  // _id field is an autom generated 
+                "status": "selected",
+                "offer_accepted": true,
+                "joining_date": ISODate("2023-11-15")
+            },
+            {
+                "user_id": ObjectId("user_id_2"),  // _id field is an autom generated 
+                "status": "selected",
+                "offer_accepted": false,
+                "joining_date": null
+            },
+        ],
+    },
+    {
+        "_id": ObjectId("drive_id_2"),    // _id field is an autom generated 
+        "drive_name": "Full Stack Developer Hiring",
+        "drive_date": ISODate("2023-09-25"),
+        "placement_status": "in-progress",
+        "placement_candidates": [
+            {
+                "user_id": ObjectId("user_id_3"),   // _id field is an autom generated 
+                "status": "pending",
+                "offer_accepted": null,
+                "joining_date": null
+            },
+        ],
+    },
+]
+
+---------------------------------------------------------------------------------------------------------------------
+Sample Mentors Collections
+--------------------------
+
+[
+    {
+        "_id": ObjectId("mentor_id_1"),   // _id field is an autom generated 
+        "mentor_name": "Manikandan",
+        "email": "mani@gmail.com",
+        "specialization": "Software Development",
+        "years_of_experience": 10,
+    },
+    {
+        "_id": ObjectId("mentor_id_2"),   // _id field is an autom generated 
+        "mentor_name": "Thirupathi",
+        "email": "thiru@gmail.com",
+        "specialization": "Front End Developement",
+        "years_of_experience": 5,
+    },
+]
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
