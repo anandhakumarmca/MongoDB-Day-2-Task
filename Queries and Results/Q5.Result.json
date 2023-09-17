@@ -1,0 +1,10 @@
+[{
+  "mentorId": 1,
+  "email": "manikandan@gmail.com",
+  "menteeCount": 20
+},
+{
+  "mentorId": 2,
+  "email": "thiru@gmail.com",
+  "menteeCount": 18
+}]

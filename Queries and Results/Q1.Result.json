@@ -1,0 +1,248 @@
+[{
+  "topicId": 3,
+  "topicName": "Netlify Deployment",
+  "topicDate": {
+    "$date": "2020-10-02T00:00:00.000Z"
+  },
+  "tasks": []
+},
+{
+  "topicId": 4,
+  "topicName": "React Props",
+  "topicDate": {
+    "$date": "2020-10-05T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "taskId": 4,
+      "taskName": "React Props Task",
+      "dueDate": {
+        "$date": "2020-10-05T00:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "topicId": 5,
+  "topicName": "React States",
+  "topicDate": {
+    "$date": "2020-10-06T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "taskId": 5,
+      "taskName": "React States Task",
+      "dueDate": {
+        "$date": "2020-10-06T00:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "topicId": 6,
+  "topicName": "React Components",
+  "topicDate": {
+    "$date": "2020-10-06T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "taskId": 5,
+      "taskName": "React States Task",
+      "dueDate": {
+        "$date": "2020-10-06T00:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "topicId": 7,
+  "topicName": "React Hooks",
+  "topicDate": {
+    "$date": "2020-10-07T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "taskId": 6,
+      "taskName": "React Components Task",
+      "dueDate": {
+        "$date": "2020-10-07T00:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "topicId": 8,
+  "topicName": "React Router",
+  "topicDate": {
+    "$date": "2020-10-08T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "taskId": 7,
+      "taskName": "React Hooks Task",
+      "dueDate": {
+        "$date": "2020-10-08T00:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "topicId": 9,
+  "topicName": "Context API",
+  "topicDate": {
+    "$date": "2020-10-09T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "taskId": 8,
+      "taskName": "React Router Task",
+      "dueDate": {
+        "$date": "2020-10-09T00:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "topicId": 10,
+  "topicName": "React useRef",
+  "topicDate": {
+    "$date": "2020-10-12T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "taskId": 10,
+      "taskName": "React useRef Task",
+      "dueDate": {
+        "$date": "2020-10-12T00:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "topicId": 11,
+  "topicName": "React useReducer",
+  "topicDate": {
+    "$date": "2020-10-13T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "taskId": 11,
+      "taskName": "React useReducer Task",
+      "dueDate": {
+        "$date": "2020-10-13T00:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "topicId": 12,
+  "topicName": "React Axios",
+  "topicDate": {
+    "$date": "2020-10-14T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "taskId": 12,
+      "taskName": "Axios Task",
+      "dueDate": {
+        "$date": "2020-10-14T00:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "topicId": 13,
+  "topicName": "React Formik",
+  "topicDate": {
+    "$date": "2020-10-15T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "taskId": 13,
+      "taskName": "React Formix Task",
+      "dueDate": {
+        "$date": "2020-10-15T00:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "topicId": 14,
+  "topicName": "React Redux",
+  "topicDate": {
+    "$date": "2020-10-16T00:00:00.000Z"
+  },
+  "tasks": []
+},
+{
+  "topicId": 15,
+  "topicName": "MySQL CRUD",
+  "topicDate": {
+    "$date": "2020-10-19T00:00:00.000Z"
+  },
+  "tasks": []
+},
+{
+  "topicId": 16,
+  "topicName": "MySQL Normalization",
+  "topicDate": {
+    "$date": "2020-10-21T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "taskId": 16,
+      "taskName": "MySQL Normalization Task",
+      "dueDate": {
+        "$date": "2020-10-21T00:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "topicId": 17,
+  "topicName": "MongoDB CRUD",
+  "topicDate": {
+    "$date": "2020-10-22T00:00:00.000Z"
+  },
+  "tasks": [
+    {
+      "taskId": 17,
+      "taskName": "MongoDB CRUD Task",
+      "dueDate": {
+        "$date": "2020-10-22T00:00:00.000Z"
+      }
+    }
+  ]
+},
+{
+  "topicId": 18,
+  "topicName": "MongoDB Aggregation",
+  "topicDate": {
+    "$date": "2020-10-23T00:00:00.000Z"
+  },
+  "tasks": []
+},
+{
+  "topicId": 19,
+  "topicName": "Nodejs",
+  "topicDate": {
+    "$date": "2020-10-26T00:00:00.000Z"
+  },
+  "tasks": []
+},
+{
+  "topicId": 20,
+  "topicName": "Expressjs",
+  "topicDate": {
+    "$date": "2020-10-28T00:00:00.000Z"
+  },
+  "tasks": []
+},
+{
+  "topicId": 21,
+  "topicName": "MongoDB Connectivity",
+  "topicDate": {
+    "$date": "2020-10-30T00:00:00.000Z"
+  },
+  "tasks": []
+}]
