@@ -1,0 +1,1 @@
+this folder contains the screenshort of MongoDb Compass of Zen DB design query and results
