@@ -1,139 +1,234 @@
 Q1: Find all the topics and tasks which are thought in the month of October
 ===========================================================================
 
-db.topics.find({ "topic_date": { $gte: ISODate("2023-10-01"), $lte: ISODate("2023-10-31") } })
+db.getCollection('topics').aggregate(
+  [
+    {
+      $match: {
+        $expr: {
+          $eq: [{ $month: '$topicDate' }, 10]
+        }
+      }
+    },
+    {
+      $lookup: {
+        from: 'tasks',
+        let: { topicDate: '$topicDate' },
+        pipeline: [
+          {
+            $addFields: {
+              taskMonth: { $month: '$dueDate' },
+              taskDay: { $dayOfMonth: '$dueDate' }
+            }
+          },
+          {
+            $match: {
+              $expr: {
+                $and: [
+                  { $eq: ['$taskMonth', 10] },
+                  {
+                    $eq: [
+                      '$taskDay',
+                      {
+                        $dayOfMonth: '$$topicDate'
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            $project: {
+              _id: 0,
+              taskId: 1,
+              taskName: 1,
+              dueDate: 1
+            }
+          }
+        ],
+        as: 'tasks'
+      }
+    },
+    {
+      $project: {
+        _id: 0,
+        topicId: 1,
+        topicName: 1,
+        topicDate: 1,
+        tasks: 1
+      }
+    }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
 -----------------------------------------------------------------------------------------------
 
 Q2: Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
 ==================================================================================
 
-db.company_drives.find({ "drive_date": { $gte: ISODate("2020-10-15"), $lte: ISODate("2020-10-31") } })
+db.getCollection('company_drives').aggregate(
+  [
+    {
+      $match: {
+        driveDate: {
+          $gte: '2020-10-15T00:00:00.000Z',
+          $lte: '2020-10-31T23:59:59.999Z'
+        }
+      }
+    }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
 ------------------------------------------------------------------------------------------------------
 
 Q3: Find all the company drives and students who are appeared for the placement
 ===============================================================================
 
-db.attendance.aggregate([
+db.getCollection('company_drives').aggregate(
+  [
     {
-        $match: { "is_present": true }
+      $lookup: {
+        from: 'users',
+        localField: 'usersAppeared.userId',
+        foreignField: 'userId',
+        as: 'students'
+      }
     },
     {
-        $lookup: {
-            from: "users",
-            localField: "user_id",
-            foreignField: "_id",
-            as: "user"
-        }
-    },
-    {
-        $lookup: {
-            from: "company_drives",
-            localField: "date",
-            foreignField: "drive_date",
-            as: "company_drive"
-        }
-    },
-    {
-        $project: {
-            "company_drive.drive_name": 1,
-            "user.name": 1
-        }
+      $project: {
+        _id: 0,
+        'Drive Name': '$driveName',
+        'Drive Date': '$driveDate',
+        'Students Appeared': '$students.username'
+      }
     }
-])
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
 
 -------------------------------------------------
 
 Q4: Find the number of problems solved by the user in codekata
 ==============================================================
 
-db.codekata.aggregate([
+db.getCollection('codekata').aggregate(
+  [
+    { $unwind: '$solvedUsers' },
     {
-        $group: {
-            _id: "$user_id",
-            problems_solved: { $sum: 1 }
-        }
+      $group: {
+        _id: '$solvedUsers.userId',
+        solvedProblems: { $push: '$$ROOT' }
+      }
     },
     {
-        $lookup: {
-            from: "users",
-            localField: "_id",
-            foreignField: "_id",
-            as: "user"
+      $replaceRoot: {
+        newRoot: {
+          $mergeObjects: [
+            { _id: '$_id' },
+            {
+              solvedProblems: {
+                $size: '$solvedProblems'
+              }
+            }
+          ]
         }
+      }
     },
-    {
-        $project: {
-            "user.name": 1,
-            "problems_solved": 1
-        }
-    }
-])
+    { $sort: { _id: 1 } }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
 ---------------------------------------------------------------
 
 Q5: Find all the mentors with who has the mentee's count more than 15
 =====================================================================
 
-db.mentorship.aggregate([
+db.getCollection('mentors').aggregate(
+  [
     {
-        $group: {
-            _id: "$mentor_id",
-            mentee_count: { $sum: 1 }
+      $project: {
+        _id: 0,
+        mentorId: 1,
+        username: 1,
+        email: 1,
+        menteeCount: {
+          $size: '$assignedMentees.userId'
         }
+      }
     },
-    {
-        $match: { "mentee_count": { $gt: 15 } }
-    },
-    {
-        $lookup: {
-            from: "mentors",
-            localField: "_id",
-            foreignField: "_id",
-            as: "mentor"
-        }
-    },
-    {
-        $project: {
-            "mentor.mentor_name": 1,
-            "mentee_count": 1
-        }
-    }
-])
+    { $match: { menteeCount: { $gt: 1 } } }
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
 ------------------------------------------------------------------
 
 Q6: Find the number of users who are absent and task is not submitted between 15 oct-2020 and 31-oct-2020
 ==========================================================================================================
 
-db.users.aggregate([
+db.getCollection('attendance').aggregate(
+  [
     {
-        $lookup: {
-            from: "attendance",
-            localField: "_id",
-            foreignField: "user_id",
-            as: "attendance"
-        }
+      $match: {
+        date: {
+          $gte: '2020-10-15T00:00:00.000Z',
+          $lte: '2020-10-31T23:59:59.999Z'
+        },
+        $or: [
+          { status: 'absent' },
+          { taskSubmitted: false }
+        ]
+      }
     },
     {
-        $lookup: {
-            from: "tasks",
-            localField: "_id",
-            foreignField: "user_id",
-            as: "tasks"
-        }
+      $group: {
+        _id: {
+          userId: '$userId',
+          status: {
+            $cond: [
+              { $eq: ['$status', 'absent'] },
+              'absent',
+              'taskSubmitted: false'
+            ]
+          }
+        },
+        count: { $sum: 1 },
+        dates: { $push: '$date' }
+      }
     },
     {
-        $match: {
-            "attendance.date": { $gte: ISODate("2020-10-15"), $lte: ISODate("2020-10-31") },
-            "attendance.is_present": false,
-            "tasks.date_assigned": { $gte: ISODate("2020-10-15"), $lte: ISODate("2020-10-31") },
-            "tasks.date_submitted": null
+      $group: {
+        _id: '$_id.userId',
+        userData: {
+          $push: {
+            status: '$_id.status',
+            count: '$count',
+            dates: '$dates'
+          }
         }
+      }
     },
     {
-        $group: {
-            _id: null,
-            absent_users_count: { $sum: 1 }
-        }
+      $project: {
+        _id: 0,
+        userId: '$_id',
+        userData: 1
+      }
+    },
+    {
+      $group: {
+        _id: null,
+        usersData: { $push: '$$ROOT' }
+      }
+    },
+    {
+      $project: {
+        _id: 0,
+        absentAndTaskNotSubmitted: '$usersData'
+      }
     }
-])
+  ],
+  { maxTimeMS: 60000, allowDiskUse: true }
+);
 -------------------------------------------------------------------------------------------------
 ==================================================================================================
