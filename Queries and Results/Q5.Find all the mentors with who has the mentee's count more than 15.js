@@ -4,7 +4,7 @@ db.getCollection('mentors').aggregate(
       $project: {
         _id: 0,
         mentorId: 1,
-        username: 1,
+        mentoName: 1,
         email: 1,
         menteeCount: {
           $size: '$assignedMentees.userId'
