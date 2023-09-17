@@ -1,0 +1,1 @@
+This folder contains all queries and the results of queries json files
