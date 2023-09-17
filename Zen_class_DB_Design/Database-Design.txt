@@ -3,191 +3,354 @@ Zen class Database Design
 Sample Users Collections
 -------------------------
 
-[
-    {
-        "_id": ObjectId("user_id_1"),   // _id field is an automatically generated unique identifier by MongoDB
-        "name": "Anandh Kumar",
-        "email": "accetanandhmca@gmail.com",
-        "age": 32,
-        "gender": "Male",
-        "address": {
-            "street": "79/B",
-            "city": "Palani",
-            "state": "Tamilnadu",
-            "zipcode": "624601"
-        }
-    },
-    {
-        "_id": ObjectId("user_id_2"),    // _id field is an automatically generated unique identifier by MongoDB
-        "name": "Mani Kumar",
-        "email": "kumaarit@gmail.com",
-        "age": 35,
-        "gender": "Male",
-        "address": {
-            "street": "79/B",
-            "city": "Palani",
-            "state": "Tamilnadu",
-            "zipcode": "624601"
-        }
-    },
-]
+[{
+  "_id": {
+    "$oid": "650558b467ee6d547580f2ea"
+  },
+  "userId": 1,
+  "username": "Anandh",
+  "email": "anandh@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "650558b467ee6d547580f2eb"
+  },
+  "userId": 2,
+  "username": "Divya",
+  "email": "divya@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "650558b467ee6d547580f2ec"
+  },
+  "userId": 3,
+  "username": "Swastic",
+  "email": "swastic@gmail.com"
+}]
 ---------------------------------------------------------------------------------------------------------------------
 Sample Codekata Collections
 ---------------------------
 
-[
+[{
+  "_id": {
+    "$oid": "6505f21261980c0393706c8b"
+  },
+  "problemId": 1,
+  "problemName": "Input/Output",
+  "solvedUsers": [
     {
-        "_id": ObjectId("codekata_id_1"),  // _id field is an autom generated 
-        "user_id": ObjectId("user_id_1"),  // _id field is an autom generated 
-        "problem_id": ObjectId("problem_id_1"), // _id field is an autom generated 
-        "date_solved": ISODate("2023-10-05"),
-        "language": "Nodejs",
-        "solution_code": "/* solution code  */",
+      "userId": 1,
+      "solvedDate": "2020-09-21T00:00:00.000Z"
     },
     {
-        "_id": ObjectId("codekata_id_2"),  // _id field is an autom generated 
-        "user_id": ObjectId("user_id_2"),  // _id field is an autom generated 
-        "problem_id": ObjectId("problem_id_2"),  // _id field is an autom generated 
-        "date_solved": ISODate("2023-10-08"),
-        "language": "Java",
-        "solution_code": "/* solution Java code here */",
+      "userId": 6,
+      "solvedDate": "2020-10-04T00:00:00.000Z"
     },
-]
+    {
+      "userId": 43,
+      "solvedDate": "2020-10-30T00:00:00.000Z"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6505f21261980c0393706c8c"
+  },
+  "problemId": 2,
+  "problemName": "Absolute Beginner",
+  "solvedUsers": [
+    {
+      "userId": 1,
+      "solvedDate": "2020-10-11T00:00:00.000Z"
+    },
+    {
+      "userId": 13,
+      "solvedDate": "2020-09-29T00:00:00.000Z"
+    },
+    {
+      "userId": 35,
+      "solvedDate": "2020-10-01T00:00:00.000Z"
+    },
+    {
+      "userId": 45,
+      "solvedDate": "2020-10-11T00:00:00.000Z"
+    }
+  ]
+}]
 
 ---------------------------------------------------------------------------------------------------------------------
 Sample Attendance Collections
 -----------------------------
 
-[
-    {
-        "_id": ObjectId("attendance_id_1"),  // _id field is an autom generated 
-        "user_id": ObjectId("user_id_1"),   // _id field is an autom generated 
-        "date": ISODate("2023-10-01"),
-        "is_present": true,
-    },
-    {
-        "_id": ObjectId("attendance_id_2"),   // _id field is an autom generated 
-        "user_id": ObjectId("user_id_2"),   // _id field is an autom generated 
-        "date": ISODate("2023-10-01"),
-        "is_present": false,
-    },
-    {
-        "_id": ObjectId("attendance_id_3"),  // _id field is an autom generated 
-        "user_id": ObjectId("user_id_1"),   // _id field is an autom generated 
-        "date": ISODate("2023-10-02"), 
-        "is_present": true,
-    },
-]
+[{
+  "_id": {
+    "$oid": "650655b895f1fc36b5baceb3"
+  },
+  "userId": 1,
+  "date": "2020-10-15T00:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": true
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5baceb4"
+  },
+  "userId": 1,
+  "date": "2020-10-16T00:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": false
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5baceb5"
+  },
+  "userId": 1,
+  "date": "2020-10-19T00:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": false
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5baceb6"
+  },
+  "userId": 1,
+  "date": "2020-10-21T00:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": true
+}]
 
 ---------------------------------------------------------------------------------------------------------------------
 Sample Topics Collections
 -------------------------
 
-[
-    {
-        "_id": ObjectId("topic_id_1"),  // _id field is an autom generated 
-        "topic_name": "MongoDB Basics",
-        "description": "Introduction to MongoDB and NoSQL databases",
-        "mentor": "Manikandan",
-        "start_date": ISODate("2023-10-05"),
-        "end_date": ISODate("2023-10-10"),
-    },
-    {
-        "_id": ObjectId("topic_id_2"),  // _id field is an autom generated 
-        "topic_name": "JavaScript Fundamentals",
-        "description": "Fundamental concepts of JavaScript programming",
-        "mentor": "Tirupathi",
-        "start_date": ISODate("2023-10-12"),
-        "end_date": ISODate("2023-10-18"),
-    },
-]
+[{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f337"
+  },
+  "topicId": 1,
+  "topicName": "ES5vsES6",
+  "topicDate": {
+    "$date": "2020-09-28T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f338"
+  },
+  "topicId": 2,
+  "topicName": "React JSX",
+  "topicDate": {
+    "$date": "2020-09-30T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f339"
+  },
+  "topicId": 3,
+  "topicName": "Netlify Deployment",
+  "topicDate": {
+    "$date": "2020-10-02T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f33a"
+  },
+  "topicId": 4,
+  "topicName": "React Props",
+  "topicDate": {
+    "$date": "2020-10-05T00:00:00.000Z"
+  }
+}]
 
 ---------------------------------------------------------------------------------------------------------------------
 Sample Tasks Collections
 ------------------------
 
-[
+[{
+  "_id": {
+    "$oid": "650596ece66a93b2a87115f7"
+  },
+  "taskId": 1,
+  "taskName": "JavaScript CRUD",
+  "dueDate": {
+    "$date": "2020-09-29T00:00:00.000Z"
+  },
+  "taskSubmission": [
     {
-        "_id": ObjectId("task_id_1"),   // _id field is an autom generated 
-        "user_id": ObjectId("user_id_1"),  // _id field is an autom generated 
-        "task_name": "JavaScript Task 4",
-        "date_assigned": ISODate("2023-10-15"),
-        "date_due": ISODate("2023-10-25"),
-        "date_submitted": ISODate("2023-10-23"),
-        "status": "completed",
+      "userId": 1,
+      "submittedDate": "2020-09-28T09:00:00.000Z"
     },
     {
-        "_id": ObjectId("task_id_2"),  // _id field is an autom generated 
-        "user_id": ObjectId("user_id_2"),  // _id field is an autom generated 
-        "task_name": "Codekata Numbers Challenge",
-        "date_assigned": ISODate("2023-10-18"),
-        "date_due": ISODate("2023-10-28"),
-        "date_submitted": null,
-        "status": "pending",
+      "userId": 9,
+      "submittedDate": "2020-09-28T09:00:00.000Z"
     },
-]
+    {
+      "userId": 14,
+      "submittedDate": "2020-09-29T14:30:00.000Z"
+    },
+    {
+      "userId": 26,
+      "submittedDate": "2020-09-29T14:30:00.000Z"
+    },
+    {
+      "userId": 31,
+      "submittedDate": "2020-09-29T14:30:00.000Z"
+    },
+    {
+      "userId": 32,
+      "submittedDate": "2020-10-29T14:30:00.000Z"
+    },
+    {
+      "userId": 48,
+      "submittedDate": "2020-09-29T14:30:00.000Z"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "650596ece66a93b2a87115f8"
+  },
+  "taskId": 2,
+  "taskName": "Sample React Task",
+  "dueDate": {
+    "$date": "2020-10-01T00:00:00.000Z"
+  },
+  "taskSubmission": [
+    {
+      "userId": 1,
+      "submittedDate": "2020-09-31T09:00:00.000Z"
+    },
+    {
+      "userId": 12,
+      "submittedDate": "2020-09-29T14:30:00.000Z"
+    },
+    {
+      "userId": 22,
+      "submittedDate": "2020-10-01T00:00:00.000Z"
+    },
+    {
+      "userId": 37,
+      "submittedDate": "2020-10-20T00:00:00.000Z"
+    },
+    {
+      "userId": 42,
+      "submittedDate": "2020-10-01T00:00:00.000Z"
+    },
+    {
+      "userId": 50,
+      "submittedDate": "2020-10-06T00:00:00.000Z"
+    }
+  ]
+}]
 
 ---------------------------------------------------------------------------------------------------------------------
 Sample Company-Drives Collections
 ---------------------------------
 
-[
+[{
+  "_id": {
+    "$oid": "6505666067ee6d547580f325"
+  },
+  "driveId": 1,
+  "driveName": "Google",
+  "driveDate": "2020-10-04T00:00:00.000Z",
+  "usersAppeared": [
     {
-        "_id": ObjectId("drive_id_1"),  // _id field is an autom generated 
-        "drive_name": "Infosoft Company Recruitment",
-        "drive_date": ISODate("2023-08-20"),
-        "placement_status": "completed",
-        "placement_candidates": [
-            {
-                "user_id": ObjectId("user_id_1"),  // _id field is an autom generated 
-                "status": "selected",
-                "offer_accepted": true,
-                "joining_date": ISODate("2023-11-15")
-            },
-            {
-                "user_id": ObjectId("user_id_2"),  // _id field is an autom generated 
-                "status": "selected",
-                "offer_accepted": false,
-                "joining_date": null
-            },
-        ],
+      "userId": 1
     },
     {
-        "_id": ObjectId("drive_id_2"),    // _id field is an autom generated 
-        "drive_name": "Full Stack Developer Hiring",
-        "drive_date": ISODate("2023-09-25"),
-        "placement_status": "in-progress",
-        "placement_candidates": [
-            {
-                "user_id": ObjectId("user_id_3"),   // _id field is an autom generated 
-                "status": "pending",
-                "offer_accepted": null,
-                "joining_date": null
-            },
-        ],
+      "userId": 6
     },
-]
+    {
+      "userId": 28
+    },
+    {
+      "userId": 30
+    },
+    {
+      "userId": 43
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6505666067ee6d547580f326"
+  },
+  "driveId": 2,
+  "driveName": "Zoho",
+  "driveDate": "2020-10-11T00:00:00.000Z",
+  "usersAppeared": [
+    {
+      "userId": 1
+    },
+    {
+      "userId": 13
+    },
+    {
+      "userId": 35
+    },
+    {
+      "userId": 45
+    }
+  ]
+}]
 
 ---------------------------------------------------------------------------------------------------------------------
 Sample Mentors Collections
 --------------------------
 
-[
+[{
+  "_id": {
+    "$oid": "65055b0767ee6d547580f31f"
+  },
+  "mentorId": 1,
+  "mentoName": "Manikandan",
+  "email": "manikandan@gmail.com",
+  "assignedMentees": [
     {
-        "_id": ObjectId("mentor_id_1"),   // _id field is an autom generated 
-        "mentor_name": "Manikandan",
-        "email": "mani@gmail.com",
-        "specialization": "Software Development",
-        "years_of_experience": 10,
+      "userId": 1
     },
     {
-        "_id": ObjectId("mentor_id_2"),   // _id field is an autom generated 
-        "mentor_name": "Thirupathi",
-        "email": "thiru@gmail.com",
-        "specialization": "Front End Developement",
-        "years_of_experience": 5,
+      "userId": 3
     },
-]
+    {
+      "userId": 12
+    },
+    {
+      "userId": 14
+    },
+    {
+      "userId": 15
+    },
+    {
+      "userId": 18
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65055b0767ee6d547580f320"
+  },
+  "mentorId": 2,
+  "mentoName": "Thirupathi",
+  "email": "thiru@gmail.com",
+  "assignedMentees": [
+    {
+      "userId": 21
+    },
+    {
+      "userId": 23
+    },
+    {
+      "userId": 26
+    },
+    {
+      "userId": 28
+    }
+  ]
+}]
 
 ---------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------------
