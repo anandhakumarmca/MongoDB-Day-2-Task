@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "65055b0767ee6d547580f31f"
+  },
+  "mentorId": 1,
+  "mentoName": "Manikandan",
+  "email": "manikandan@gmail.com",
+  "assignedMentees": [
+    {
+      "userId": 1
+    },
+    {
+      "userId": 2
+    },
+    {
+      "userId": 3
+    },
+    {
+      "userId": 4
+    },
+    {
+      "userId": 5
+    },
+    {
+      "userId": 6
+    },
+    {
+      "userId": 7
+    },
+    {
+      "userId": 8
+    },
+    {
+      "userId": 9
+    },
+    {
+      "userId": 10
+    },
+    {
+      "userId": 11
+    },
+    {
+      "userId": 12
+    },
+    {
+      "userId": 13
+    },
+    {
+      "userId": 14
+    },
+    {
+      "userId": 15
+    },
+    {
+      "userId": 16
+    },
+    {
+      "userId": 17
+    },
+    {
+      "userId": 18
+    },
+    {
+      "userId": 19
+    },
+    {
+      "userId": 20
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65055b0767ee6d547580f320"
+  },
+  "mentorId": 2,
+  "mentoName": "Thirupathi",
+  "email": "thiru@gmail.com",
+  "assignedMentees": [
+    {
+      "userId": 21
+    },
+    {
+      "userId": 22
+    },
+    {
+      "userId": 23
+    },
+    {
+      "userId": 24
+    },
+    {
+      "userId": 25
+    },
+    {
+      "userId": 26
+    },
+    {
+      "userId": 27
+    },
+    {
+      "userId": 28
+    },
+    {
+      "userId": 29
+    },
+    {
+      "userId": 30
+    },
+    {
+      "userId": 31
+    },
+    {
+      "userId": 32
+    },
+    {
+      "userId": 33
+    },
+    {
+      "userId": 34
+    },
+    {
+      "userId": 35
+    },
+    {
+      "userId": 36
+    },
+    {
+      "userId": 37
+    },
+    {
+      "userId": 38
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65055b0767ee6d547580f321"
+  },
+  "mentorId": 3,
+  "mentoName": "Vidhya",
+  "email": "vidhya@gmail.com",
+  "assignedMentees": [
+    {
+      "userId": 39
+    },
+    {
+      "userId": 40
+    },
+    {
+      "userId": 41
+    },
+    {
+      "userId": 42
+    },
+    {
+      "userId": 43
+    },
+    {
+      "userId": 44
+    },
+    {
+      "userId": 45
+    },
+    {
+      "userId": 46
+    },
+    {
+      "userId": 47
+    },
+    {
+      "userId": 48
+    },
+    {
+      "userId": 49
+    },
+    {
+      "userId": 50
+    }
+  ]
+}]

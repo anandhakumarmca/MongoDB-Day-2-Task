@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "650655b895f1fc36b5baceb3"
+  },
+  "userId": 1,
+  "date": "2020-10-15T00:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": true
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5baceb4"
+  },
+  "userId": 1,
+  "date": "2020-10-16T00:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": false
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5baceb5"
+  },
+  "userId": 1,
+  "date": "2020-10-19T00:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": false
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5baceb6"
+  },
+  "userId": 1,
+  "date": "2020-10-21T00:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": true
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5baceb7"
+  },
+  "userId": 1,
+  "date": "2020-10-22T00:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": false
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5baceb8"
+  },
+  "userId": 1,
+  "date": "2020-10-23:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": false
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5baceb9"
+  },
+  "userId": 1,
+  "date": "2020-10-24T00:00:00.000Z",
+  "status": "absent",
+  "taskSubmitted": true
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5baceba"
+  },
+  "userId": 1,
+  "date": "2020-10-26T00:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": false
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5bacebb"
+  },
+  "userId": 1,
+  "date": "2020-10-27T00:00:00.000Z",
+  "status": "absent",
+  "taskSubmitted": true
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5bacebc"
+  },
+  "userId": 1,
+  "date": "2020-10-28T00:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": false
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5bacebd"
+  },
+  "userId": 1,
+  "date": "2020-10-29T00:00:00.000Z",
+  "status": "absent",
+  "taskSubmitted": true
+},
+{
+  "_id": {
+    "$oid": "650655b895f1fc36b5bacebe"
+  },
+  "userId": 1,
+  "date": "2020-10-30T00:00:00.000Z",
+  "status": "present",
+  "taskSubmitted": false
+}]

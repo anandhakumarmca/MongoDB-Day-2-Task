@@ -1,0 +1,422 @@
+[{
+  "_id": {
+    "$oid": "6505f21261980c0393706c8b"
+  },
+  "problemId": 1,
+  "problemName": "Input/Output",
+  "solvedUsers": [
+    {
+      "userId": 1,
+      "solvedDate": "2020-09-21T00:00:00.000Z"
+    },
+    {
+      "userId": 6,
+      "solvedDate": "2020-10-04T00:00:00.000Z"
+    },
+    {
+      "userId": 11,
+      "solvedDate": "2020-10-02T00:00:00.000Z"
+    },
+    {
+      "userId": 12,
+      "solvedDate": "2020-10-01T00:00:00.000Z"
+    },
+    {
+      "userId": 18,
+      "solvedDate": "2020-10-15T00:00:00.000Z"
+    },
+    {
+      "userId": 20,
+      "solvedDate": "2020-10-12T00:00:00.000Z"
+    },
+    {
+      "userId": 25,
+      "solvedDate": "2020-10-06T00:00:00.000Z"
+    },
+    {
+      "userId": 28,
+      "solvedDate": "2020-10-04T00:00:00.000Z"
+    },
+    {
+      "userId": 30,
+      "solvedDate": "2020-10-24T00:00:00.000Z"
+    },
+    {
+      "userId": 38,
+      "solvedDate": "2020-10-28T00:00:00.000Z"
+    },
+    {
+      "userId": 43,
+      "solvedDate": "2020-10-30T00:00:00.000Z"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6505f21261980c0393706c8c"
+  },
+  "problemId": 2,
+  "problemName": "Absolute Beginner",
+  "solvedUsers": [
+    {
+      "userId": 1,
+      "solvedDate": "2020-10-11T00:00:00.000Z"
+    },
+    {
+      "userId": 13,
+      "solvedDate": "2020-09-29T00:00:00.000Z"
+    },
+    {
+      "userId": 35,
+      "solvedDate": "2020-10-01T00:00:00.000Z"
+    },
+    {
+      "userId": 45,
+      "solvedDate": "2020-10-11T00:00:00.000Z"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6505f21261980c0393706c8d"
+  },
+  "problemId": 3,
+  "problemName": "Array",
+  "solvedUsers": [
+    {
+      "userId": 6,
+      "solvedDate": "2020-10-21T00:00:00.000Z"
+    },
+    {
+      "userId": 7,
+      "solvedDate": "2020-10-11T00:00:00.000Z"
+    },
+    {
+      "userId": 8,
+      "solvedDate": "2020-10-13T00:00:00.000Z"
+    },
+    {
+      "userId": 9,
+      "solvedDate": "2020-10-01T00:00:00.000Z"
+    },
+    {
+      "userId": 12,
+      "solvedDate": "2020-10-16T00:00:00.000Z"
+    },
+    {
+      "userId": 16,
+      "solvedDate": "2020-10-18T00:00:00.000Z"
+    },
+    {
+      "userId": 22,
+      "solvedDate": "2020-10-21T00:00:00.000Z"
+    },
+    {
+      "userId": 28,
+      "solvedDate": "2020-10-13T00:00:00.000Z"
+    },
+    {
+      "userId": 32,
+      "solvedDate": "2020-10-26T00:00:00.000Z"
+    },
+    {
+      "userId": 35,
+      "solvedDate": "2020-10-18T00:00:00.000Z"
+    },
+    {
+      "userId": 48,
+      "solvedDate": "2020-10-19T00:00:00.000Z"
+    },
+    {
+      "userId": 50,
+      "solvedDate": "2020-10-11T00:00:00.000Z"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6505f21261980c0393706c8e"
+  },
+  "problemId": 4,
+  "problemName": "Mathematics",
+  "solvedUsers": [
+    {
+      "userId": 1,
+      "solvedDate": "2020-10-01T00:00:00.000Z"
+    },
+    {
+      "userId": 2,
+      "solvedDate": "2020-10-11T00:00:00.000Z"
+    },
+    {
+      "userId": 37,
+      "solvedDate": "2020-10-23T00:00:00.000Z"
+    },
+    {
+      "userId": 44,
+      "solvedDate": "2020-10-15T00:00:00.000Z"
+    },
+    {
+      "userId": 50,
+      "solvedDate": "2020-10-21T00:00:00.000Z"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6505f21261980c0393706c8f"
+  },
+  "problemId": 5,
+  "problemName": "Strings",
+  "solvedUsers": [
+    {
+      "userId": 7,
+      "solvedDate": "2020-10-01T00:00:00.000Z"
+    },
+    {
+      "userId": 9,
+      "solvedDate": "2020-10-21T00:00:00.000Z"
+    },
+    {
+      "userId": 15,
+      "solvedDate": "2020-10-16T00:00:00.000Z"
+    },
+    {
+      "userId": 16,
+      "solvedDate": "2020-10-21T00:00:00.000Z"
+    },
+    {
+      "userId": 28,
+      "solvedDate": "2020-10-27T00:00:00.000Z"
+    },
+    {
+      "userId": 29,
+      "solvedDate": "2020-10-14T00:00:00.000Z"
+    },
+    {
+      "userId": 38,
+      "solvedDate": "2020-10-19T00:00:00.000Z"
+    },
+    {
+      "userId": 42,
+      "solvedDate": "2020-10-29T00:00:00.000Z"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6505f21261980c0393706c90"
+  },
+  "problemId": 6,
+  "problemName": "Basics",
+  "solvedUsers": [
+    {
+      "userId": 4,
+      "solvedDate": "2020-10-09T00:00:00.000Z"
+    },
+    {
+      "userId": 8,
+      "solvedDate": "2020-10-01T00:00:00.000Z"
+    },
+    {
+      "userId": 17,
+      "solvedDate": "2020-10-09T00:00:00.000Z"
+    },
+    {
+      "userId": 22,
+      "solvedDate": "2020-10-14T00:00:00.000Z"
+    },
+    {
+      "userId": 28,
+      "solvedDate": "2020-10-19T00:00:00.000Z"
+    },
+    {
+      "userId": 32,
+      "solvedDate": "2020-10-22T00:00:00.000Z"
+    },
+    {
+      "userId": 35,
+      "solvedDate": "2020-10-05T00:00:00.000Z"
+    },
+    {
+      "userId": 38,
+      "solvedDate": "2020-10-03T00:00:00.000Z"
+    },
+    {
+      "userId": 40,
+      "solvedDate": "2020-10-19T00:00:00.000Z"
+    },
+    {
+      "userId": 41,
+      "solvedDate": "2020-10-29T00:00:00.000Z"
+    },
+    {
+      "userId": 50,
+      "solvedDate": "2020-10-26T00:00:00.000Z"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6505f21261980c0393706c91"
+  },
+  "problemId": 7,
+  "problemName": "Looping",
+  "solvedUsers": [
+    {
+      "userId": 2,
+      "solvedDate": "2020-10-26T00:00:00.000Z"
+    },
+    {
+      "userId": 5,
+      "solvedDate": "2020-10-16T00:00:00.000Z"
+    },
+    {
+      "userId": 18,
+      "solvedDate": "2020-10-21T00:00:00.000Z"
+    },
+    {
+      "userId": 27,
+      "solvedDate": "2020-10-16T00:00:00.000Z"
+    },
+    {
+      "userId": 28,
+      "solvedDate": "2020-10-12T00:00:00.000Z"
+    },
+    {
+      "userId": 46,
+      "solvedDate": "2020-10-21T00:00:00.000Z"
+    },
+    {
+      "userId": 47,
+      "solvedDate": "2020-10-26T00:00:00.000Z"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6505f21261980c0393706c92"
+  },
+  "problemId": 8,
+  "problemName": "Patterns",
+  "solvedUsers": [
+    {
+      "userId": 1,
+      "solvedDate": "2020-10-02T00:00:00.000Z"
+    },
+    {
+      "userId": 5,
+      "solvedDate": "2020-10-22T00:00:00.000Z"
+    },
+    {
+      "userId": 12,
+      "solvedDate": "2020-10-12T00:00:00.000Z"
+    },
+    {
+      "userId": 21,
+      "solvedDate": "2020-10-18T00:00:00.000Z"
+    },
+    {
+      "userId": 29,
+      "solvedDate": "2020-10-19T00:00:00.000Z"
+    },
+    {
+      "userId": 30,
+      "solvedDate": "2020-10-12T00:00:00.000Z"
+    },
+    {
+      "userId": 36,
+      "solvedDate": "2020-10-23T00:00:00.000Z"
+    },
+    {
+      "userId": 41,
+      "solvedDate": "2020-10-18T00:00:00.000Z"
+    },
+    {
+      "userId": 48,
+      "solvedDate": "2020-10-24T00:00:00.000Z"
+    },
+    {
+      "userId": 50,
+      "solvedDate": "2020-10-30T00:00:00.000Z"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6505f21261980c0393706c93"
+  },
+  "problemId": 9,
+  "problemName": "Hashing",
+  "solvedUsers": [
+    {
+      "userId": 12,
+      "solvedDate": "2020-10-02T00:00:00.000Z"
+    },
+    {
+      "userId": 23,
+      "solvedDate": "2020-10-12T00:00:00.000Z"
+    },
+    {
+      "userId": 24,
+      "solvedDate": "2020-10-30T00:00:00.000Z"
+    },
+    {
+      "userId": 35,
+      "solvedDate": "2020-10-23T00:00:00.000Z"
+    },
+    {
+      "userId": 42,
+      "solvedDate": "2020-10-10T00:00:00.000Z"
+    },
+    {
+      "userId": 45,
+      "solvedDate": "2020-10-21T00:00:00.000Z"
+    },
+    {
+      "userId": 46,
+      "solvedDate": "2020-10-30T00:00:00.000Z"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6505f21261980c0393706c94"
+  },
+  "problemId": 10,
+  "problemName": "Matrix",
+  "solvedUsers": [
+    {
+      "userId": 5,
+      "solvedDate": "2020-10-21T00:00:00.000Z"
+    },
+    {
+      "userId": 12,
+      "solvedDate": "2020-10-11T00:00:00.000Z"
+    },
+    {
+      "userId": 23,
+      "solvedDate": "2020-10-22T00:00:00.000Z"
+    },
+    {
+      "userId": 37,
+      "solvedDate": "2020-10-19T00:00:00.000Z"
+    },
+    {
+      "userId": 42,
+      "solvedDate": "2020-10-10T00:00:00.000Z"
+    },
+    {
+      "userId": 47,
+      "solvedDate": "2020-10-25T00:00:00.000Z"
+    },
+    {
+      "userId": 49,
+      "solvedDate": "2020-10-11T00:00:00.000Z"
+    },
+    {
+      "userId": 50,
+      "solvedDate": "2020-10-21T00:00:00.000Z"
+    }
+  ]
+}]

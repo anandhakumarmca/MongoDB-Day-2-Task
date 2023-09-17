@@ -1,0 +1,220 @@
+[{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f337"
+  },
+  "topicId": 1,
+  "topicName": "ES5vsES6",
+  "topicDate": {
+    "$date": "2020-09-28T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f338"
+  },
+  "topicId": 2,
+  "topicName": "React JSX",
+  "topicDate": {
+    "$date": "2020-09-30T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f339"
+  },
+  "topicId": 3,
+  "topicName": "Netlify Deployment",
+  "topicDate": {
+    "$date": "2020-10-02T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f33a"
+  },
+  "topicId": 4,
+  "topicName": "React Props",
+  "topicDate": {
+    "$date": "2020-10-05T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f33b"
+  },
+  "topicId": 5,
+  "topicName": "React States",
+  "topicDate": {
+    "$date": "2020-10-06T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f33c"
+  },
+  "topicId": 6,
+  "topicName": "React Components",
+  "topicDate": {
+    "$date": "2020-10-06T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f33d"
+  },
+  "topicId": 7,
+  "topicName": "React Hooks",
+  "topicDate": {
+    "$date": "2020-10-07T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f33e"
+  },
+  "topicId": 8,
+  "topicName": "React Router",
+  "topicDate": {
+    "$date": "2020-10-08T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f33f"
+  },
+  "topicId": 9,
+  "topicName": "Context API",
+  "topicDate": {
+    "$date": "2020-10-09T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f340"
+  },
+  "topicId": 10,
+  "topicName": "React useRef",
+  "topicDate": {
+    "$date": "2020-10-12T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f341"
+  },
+  "topicId": 11,
+  "topicName": "React useReducer",
+  "topicDate": {
+    "$date": "2020-10-13T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f342"
+  },
+  "topicId": 12,
+  "topicName": "React Axios",
+  "topicDate": {
+    "$date": "2020-10-14T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f343"
+  },
+  "topicId": 13,
+  "topicName": "React Formik",
+  "topicDate": {
+    "$date": "2020-10-15T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f344"
+  },
+  "topicId": 14,
+  "topicName": "React Redux",
+  "topicDate": {
+    "$date": "2020-10-16T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f345"
+  },
+  "topicId": 15,
+  "topicName": "MySQL CRUD",
+  "topicDate": {
+    "$date": "2020-10-19T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f346"
+  },
+  "topicId": 16,
+  "topicName": "MySQL Normalization",
+  "topicDate": {
+    "$date": "2020-10-21T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f347"
+  },
+  "topicId": 17,
+  "topicName": "MongoDB CRUD",
+  "topicDate": {
+    "$date": "2020-10-22T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f348"
+  },
+  "topicId": 18,
+  "topicName": "MongoDB Aggregation",
+  "topicDate": {
+    "$date": "2020-10-23T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f349"
+  },
+  "topicId": 19,
+  "topicName": "Nodejs",
+  "topicDate": {
+    "$date": "2020-10-26T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f34a"
+  },
+  "topicId": 20,
+  "topicName": "Expressjs",
+  "topicDate": {
+    "$date": "2020-10-28T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f34b"
+  },
+  "topicId": 21,
+  "topicName": "MongoDB Connectivity",
+  "topicDate": {
+    "$date": "2020-10-30T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65057cd567ee6d547580f34c"
+  },
+  "topicId": 22,
+  "topicName": "Node Deployment",
+  "topicDate": {
+    "$date": "2020-11-03T00:00:00.000Z"
+  }
+}]
